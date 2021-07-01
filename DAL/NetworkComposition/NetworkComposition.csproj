@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>NetworkConsistency.DAL.NetworkComposition</AssemblyName>
+        <RootNamespace>NetworkConsistency.DAL.NetworkComposition</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="SectionRepository" />
+      <Folder Include="SensorRepository" />
+      <Folder Include="StorageDetails" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domain\NetworkConsistencyDomain\NetworkConsistencyDomain.csproj" />
+    </ItemGroup>
+
+</Project>

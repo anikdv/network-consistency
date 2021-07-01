@@ -1,0 +1,1 @@
+﻿# MQTT service to consume and store sensors measurement

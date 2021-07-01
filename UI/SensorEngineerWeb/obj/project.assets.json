@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "NetworkConsistency.DAL.NetworkComposition/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "NetworkConsistency.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NetworkConsistency.DAL.NetworkComposition.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetworkConsistency.DAL.NetworkComposition.dll": {}
+        }
+      },
+      "NetworkConsistency.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/NetworkConsistency.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetworkConsistency.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetworkConsistency.DAL.NetworkComposition/1.0.0": {
+      "type": "project",
+      "path": "../../DAL/NetworkComposition/NetworkComposition.csproj",
+      "msbuildProject": "../../DAL/NetworkComposition/NetworkComposition.csproj"
+    },
+    "NetworkConsistency.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/NetworkConsistencyDomain/NetworkConsistencyDomain.csproj",
+      "msbuildProject": "../../Domain/NetworkConsistencyDomain/NetworkConsistencyDomain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "NetworkConsistency.DAL.NetworkComposition >= 1.0.0",
+      "NetworkConsistency.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\study\\network-consistency\\UI\\SensorEngineerWeb\\SensorEngineerWeb.csproj",
+      "projectName": "NetworkConsistency.UI.SensorEngineerWeb",
+      "projectPath": "D:\\study\\network-consistency\\UI\\SensorEngineerWeb\\SensorEngineerWeb.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "D:\\study\\network-consistency\\UI\\SensorEngineerWeb\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "D:\\study\\network-consistency\\DAL\\NetworkComposition\\NetworkComposition.csproj": {
+              "projectPath": "D:\\study\\network-consistency\\DAL\\NetworkComposition\\NetworkComposition.csproj"
+            },
+            "D:\\study\\network-consistency\\Domain\\NetworkConsistencyDomain\\NetworkConsistencyDomain.csproj": {
+              "projectPath": "D:\\study\\network-consistency\\Domain\\NetworkConsistencyDomain\\NetworkConsistencyDomain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

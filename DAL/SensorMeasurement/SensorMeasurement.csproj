@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>NetworkConsistency.DAL.SensorMeasurement</AssemblyName>
+        <RootNamespace>NetworkConsistency.DAL.SensorMeasurement</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domain\NetworkConsistencyDomain\NetworkConsistencyDomain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="InfluxData.Net" Version="8.0.1" />
+    </ItemGroup>
+
+</Project>
