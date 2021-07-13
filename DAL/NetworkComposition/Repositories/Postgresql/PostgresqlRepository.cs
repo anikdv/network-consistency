@@ -6,8 +6,8 @@ using FluentResults;
 using Microsoft.EntityFrameworkCore;
 using NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql.Entities;
 using NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql.ValueObjects;
-using NetworkConsistency.Domain.Aggregators.Section;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Section;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 using NetworkConsistency.Domain.Errors;
 
 namespace NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql

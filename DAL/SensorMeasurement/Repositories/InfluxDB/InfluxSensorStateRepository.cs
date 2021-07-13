@@ -4,7 +4,7 @@ using FluentResults;
 using InfluxDB.Client;
 using InfluxDB.Client.Api.Domain;
 using InfluxDB.Client.Writes;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 
 namespace NetworkConsistency.DAL.SensorMeasurement.Repositories.InfluxDB
 {

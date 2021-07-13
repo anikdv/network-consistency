@@ -1,12 +1,12 @@
 ﻿using System;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 
 namespace SensorAdminApi.Model.ValueObjects
 {
     public class ApiSensorDto
     {
-        public string Name { get; protected init; }
-        public SensorStates State { get; protected init; }
-        public DateTime StateDate { get; protected init; }
+        public string Name { get; set; }
+        public SensorStates State { get; set; }
+        public DateTime StateDate { get; set; }
     }
 }

@@ -2,7 +2,7 @@ using System;
 using FluentResults;
 using NetworkConsistency.Domain.Errors;
 
-namespace NetworkConsistency.Domain.Aggregators.FailureReport
+namespace NetworkConsistency.Domain.Aggregates.FailureReport
 {
     public class FailureReport
     {

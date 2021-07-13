@@ -1,6 +1,6 @@
 using System;
 
-namespace NetworkConsistency.Domain.Aggregators.Section
+namespace NetworkConsistency.Domain.Aggregates.Section
 {
     public abstract class Section
     {

@@ -1,6 +1,5 @@
 ﻿using System;
-using NetworkConsistency.Domain.Aggregators.Section;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 
 namespace ReportStorage.Repositories.Cassandra.Models
 {

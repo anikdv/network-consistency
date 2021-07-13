@@ -3,7 +3,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using FluentResults;
 using Microsoft.Extensions.Configuration;
-using NetworkConsistency.Domain.Aggregators.FailureReport;
+using NetworkConsistency.Domain.Aggregates.FailureReport;
 
 namespace NetworkConsistency.Services.ReportService.Notifiers
 {

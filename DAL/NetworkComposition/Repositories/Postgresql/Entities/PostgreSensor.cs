@@ -1,5 +1,5 @@
 ﻿using NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql.ValueObjects;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 
 namespace NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql.Entities
 {

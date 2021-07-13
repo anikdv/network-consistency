@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using FluentResults;
-using NetworkConsistency.Domain.Aggregators.FailureReport;
+using NetworkConsistency.Domain.Aggregates.FailureReport;
 
 namespace NetworkConsistency.Services.ReportService
 {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace NetworkConsistency.Domain.Aggregators.Sensor
+namespace NetworkConsistency.Domain.Aggregates.Sensor
 {
-    public class SensorEqualityComparer: IEqualityComparer<Sensor>
+    public class SensorEqualityComparer: IEqualityComparer<Aggregates.Sensor.Sensor>
     {
-        public bool Equals(Sensor x, Sensor y)
+        public bool Equals(Aggregates.Sensor.Sensor x, Aggregates.Sensor.Sensor y)
         {
             if (ReferenceEquals(x, y)) return true;
             if (ReferenceEquals(x, null)) return false;
@@ -13,7 +13,7 @@ namespace NetworkConsistency.Domain.Aggregators.Sensor
             return x.UID.Equals(y.UID);
         }
 
-        public int GetHashCode(Sensor obj)
+        public int GetHashCode(Aggregates.Sensor.Sensor obj)
         {
             return obj.UID.GetHashCode();
         }

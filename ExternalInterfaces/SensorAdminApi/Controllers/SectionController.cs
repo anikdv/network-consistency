@@ -4,18 +4,18 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using NetworkConsistency.DAL.NetworkComposition;
-using NetworkConsistency.Domain.Aggregators.Section;
+using NetworkConsistency.Domain.Aggregates.Section;
 using SensorAdminApi.Model.Entities;
 using SensorAdminApi.Model.ValueObjects;
 
 namespace NetworkConsistency.ExternalInterfaces.SensorAdminApi.Controllers
 {
     [ApiController, Route("/api/sections")]
-    public class SensiwSectionController : Controller
+    public class SectionController : Controller
     {
         private readonly INetworkCompositionRepository _networkCompositionRepository;
 
-        public SensiwSectionController(IConfiguration configuration)
+        public SectionController(IConfiguration configuration)
         {
             _networkCompositionRepository = NetworkCompositionFabric.GetNetworkCompositionRepository(configuration);
         }

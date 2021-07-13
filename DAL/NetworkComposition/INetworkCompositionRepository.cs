@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using FluentResults;
-using NetworkConsistency.Domain.Aggregators.Section;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Section;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 
 namespace NetworkConsistency.DAL.NetworkComposition
 {

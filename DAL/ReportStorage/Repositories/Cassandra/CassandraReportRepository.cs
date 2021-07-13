@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Cassandra;
 using Cassandra.Mapping;
 using FluentResults;
-using NetworkConsistency.Domain.Aggregators.FailureReport;
+using NetworkConsistency.Domain.Aggregates.FailureReport;
 using ReportStorage.Repositories.Cassandra.Entities;
 using ReportStorage.Repositories.Cassandra.Models;
 using ReportStorage.Repositories.Cassandra.Utils;

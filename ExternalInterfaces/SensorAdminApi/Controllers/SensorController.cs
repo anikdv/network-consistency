@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using NetworkConsistency.DAL.NetworkComposition;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 using SensorAdminApi.Model.Entities;
 using SensorAdminApi.Model.ValueObjects;
 

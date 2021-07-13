@@ -1,5 +1,5 @@
 ﻿using System;
-using NetworkConsistency.Domain.Aggregators.Section;
+using NetworkConsistency.Domain.Aggregates.Section;
 
 namespace ReportStorage.Repositories.Cassandra.Entities
 {

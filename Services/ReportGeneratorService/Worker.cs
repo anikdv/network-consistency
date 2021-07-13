@@ -7,8 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NetworkConsistency.DAL.NetworkComposition;
 using NetworkConsistency.DAL.SensorMeasurement;
-using NetworkConsistency.Domain.Aggregators.FailureReport;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.FailureReport;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 using ReportStorage;
 
 namespace NetworkConsistency.Services.SensorService

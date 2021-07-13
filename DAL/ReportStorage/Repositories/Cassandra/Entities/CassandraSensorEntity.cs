@@ -1,4 +1,4 @@
-﻿using NetworkConsistency.Domain.Aggregators.Sensor;
+﻿using NetworkConsistency.Domain.Aggregates.Sensor;
 using ReportStorage.Repositories.Cassandra.Models;
 
 namespace ReportStorage.Repositories.Cassandra.Entities

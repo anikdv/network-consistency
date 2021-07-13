@@ -1,4 +1,4 @@
-﻿namespace NetworkConsistency.Domain.Aggregators.Sensor
+﻿namespace NetworkConsistency.Domain.Aggregates.Sensor
 {
     public enum SensorStates
     {

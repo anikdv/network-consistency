@@ -1,5 +1,5 @@
 ﻿using System;
-using NetworkConsistency.Domain.Aggregators.FailureReport;
+using NetworkConsistency.Domain.Aggregates.FailureReport;
 using ReportStorage.Repositories.Cassandra.Models;
 using ReportStorage.Repositories.Cassandra.Utils;
 

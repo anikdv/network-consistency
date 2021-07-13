@@ -1,5 +1,5 @@
 ﻿using System;
-using NetworkConsistency.Domain.Aggregators.Sensor;
+using NetworkConsistency.Domain.Aggregates.Sensor;
 using SensorAdminApi.Model.ValueObjects;
 
 namespace SensorAdminApi.Model.Entities
