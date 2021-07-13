@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>dotnet-SensorMeasurementService-A22E58C8-DA5A-4436-9BEE-5F83E509ED48</UserSecretsId>
+        <AssemblyName>NetworkConsistency.Services.SensorMeasurementService</AssemblyName>
+        <RootNamespace>NetworkConsistency.Services.SensorMeasurementService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+</Project>

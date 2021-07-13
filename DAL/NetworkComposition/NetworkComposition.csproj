@@ -7,13 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="SectionRepository" />
-      <Folder Include="SensorRepository" />
-      <Folder Include="StorageDetails" />
+      <ProjectReference Include="..\..\Domain\NetworkConsistencyDomain\NetworkConsistencyDomain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Domain\NetworkConsistencyDomain\NetworkConsistencyDomain.csproj" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
     </ItemGroup>
 
 </Project>

@@ -6,4 +6,8 @@
         <RootNamespace>NetworkConsistency.Domain</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FluentResults" Version="2.5.0" />
+    </ItemGroup>
+
 </Project>

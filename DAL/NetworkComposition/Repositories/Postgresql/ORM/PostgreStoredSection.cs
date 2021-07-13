@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
-namespace NetworkConsistency.Domain.Aggregators.Section
+namespace NetworkConsistency.DAL.NetworkComposition.Repositories.Postgresql.ValueObjects
 {
-    public abstract class Section
+    public class PostgreStoredSection
     {
         public Guid UID { get; protected init; }
         public string Name { get; protected init; }
