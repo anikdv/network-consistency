@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>NetworkConsistency.ExternalInterfaces.OperatorWebDto</AssemblyName>
+        <RootNamespace>NetworkConsistency.ExternalInterfaces.OperatorWebDto</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domain\NetworkConsistencyDomain\NetworkConsistencyDomain.csproj" />
+    </ItemGroup>
+
+</Project>

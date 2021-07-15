@@ -1,0 +1,38 @@
+﻿@using NetworkConsistency.Domain.Aggregates.FailureReport
+@using NetworkConsistency.ExternalInterfaces.OperatorWebDto.Entities
+@using NetworkConsistency.ExternalInterfaces.OperatorWebDto.ValueObjects
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@inject HttpClient client
+<h3>List of reports</h3>
+
+@if (NotProcessedReports == null)
+{
+    <p>There are no reports</p>
+}
+else
+{
+    <ul>
+        @foreach (var report in NotProcessedReports)
+        {
+            <li>
+                @report.UID <span>@report.CreationDate</span>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private FailureReport[] NotProcessedReports { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        const string ENDPOINT = "api/failure-reports/not-processed";
+        var jsonOptions = new JsonSerializerOptions
+        {
+            DefaultIgnoreCondition = JsonIgnoreCondition.Always
+        };
+        var reportDto = await client.GetFromJsonAsync<FailureReportDto[]>(ENDPOINT, jsonOptions);
+        NotProcessedReports = Array.ConvertAll(reportDto, report => new OperatorWebFailureReport(report));
+    }
+}
