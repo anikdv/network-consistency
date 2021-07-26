@@ -47,7 +47,7 @@ namespace NetworkConsistency.ExternalInterfaces.OperatorWebApi.Controllers
         [HttpPut("put-to-work")]
         public async Task<ActionResult<FailureReport>> PutToWork(FailureReportDto reportDto)
         {
-            var report = new OperatorWebFailureReport(reportDto);
+            var report = OperatorWebFailureReport.Create(reportDto);
             var putToWorkResult = report.PutToWork();
             if (putToWorkResult.IsFailed) return StatusCode(StatusCodes.Status400BadRequest, putToWorkResult.Errors);
             var saveResult = await _repository.SaveFailureReport(report);
@@ -58,7 +58,7 @@ namespace NetworkConsistency.ExternalInterfaces.OperatorWebApi.Controllers
         [HttpPut("finish")]
         public async Task<ActionResult<FailureReport>> Finish(FailureReportDto reportDto)
         {
-            var report = new OperatorWebFailureReport(reportDto);
+            var report = OperatorWebFailureReport.Create(reportDto);
             var finishResult = report.FinishReport();
             if (finishResult.IsFailed) return StatusCode(StatusCodes.Status400BadRequest, finishResult.Errors);
             var saveResult = await _repository.SaveFailureReport(report);

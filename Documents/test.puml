@@ -1,0 +1,8 @@
+﻿@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+User -> Site : send request
+Site --> User : get answer
+@enduml

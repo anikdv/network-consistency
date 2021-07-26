@@ -3,7 +3,8 @@
 @using NetworkConsistency.ExternalInterfaces.OperatorWebDto.ValueObjects
 @using System.Text.Json
 @using System.Text.Json.Serialization
-@inject HttpClient client
+@inject HttpClient _client
+@inject IJSRuntime _jsRuntime
 <h3>List of reports</h3>
 
 @if (NotProcessedReports == null)
@@ -22,17 +23,41 @@ else
     </ul>
 }
 
+<label>Say phrase: @SayPhrase</label>
+<input type="text" @bind="SayPhrase"/>
+<button class="btn btn-info" @onclick="SayHello">Test button</button>
+
 @code {
     private FailureReport[] NotProcessedReports { get; set; }
+    private string? SayPhrase { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        const string ENDPOINT = "api/failure-reports/not-processed";
-        var jsonOptions = new JsonSerializerOptions
+        try
         {
-            DefaultIgnoreCondition = JsonIgnoreCondition.Always
-        };
-        var reportDto = await client.GetFromJsonAsync<FailureReportDto[]>(ENDPOINT, jsonOptions);
-        NotProcessedReports = Array.ConvertAll(reportDto, report => new OperatorWebFailureReport(report));
+            const string ENDPOINT = "api/failure-reports/not-processed";
+            var jsonOptions = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+            Console.WriteLine(await _client.GetStringAsync(ENDPOINT));
+            var reportDto =
+                await _client.GetFromJsonAsync<FailureReportDto[]>(ENDPOINT, jsonOptions)
+                ?? Array.Empty<FailureReportDto>();
+            Console.WriteLine(reportDto.FirstOrDefault()?.UID);
+            NotProcessedReports = Array.ConvertAll(reportDto, OperatorWebFailureReport.Create);
+        }
+        catch (Exception ex)
+        {
+            await Console.Error.WriteLineAsync(ex.Message);
+            await Console.Error.WriteLineAsync(ex.StackTrace);
+        }
+    }
+
+    private async void SayHello()
+    {
+        Console.WriteLine(SayPhrase);
+        await _jsRuntime.InvokeVoidAsync("alert", SayPhrase);
     }
 }
